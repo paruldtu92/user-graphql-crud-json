@@ -1,5 +1,5 @@
 import { PubSub } from "apollo-server-express";
-import users from "./users.json";
+import users from "./users.json" assert { type: "json" };
 const pubsub = new PubSub();
 
 //const fs = require("fs");
