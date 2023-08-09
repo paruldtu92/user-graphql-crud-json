@@ -1,5 +1,5 @@
 import { PubSub } from "apollo-server-express";
-const { default: users } = await import('./users.json', {
+const { default: users } = await import("./users.json", {
   assert: {
     type: 'json'
   }
