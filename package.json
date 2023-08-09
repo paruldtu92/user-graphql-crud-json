@@ -4,6 +4,9 @@
   "description": "This is a project for the GraphQL APIs from USERS",
   "type": "module",
   "main": "index.js",
+  "engines" : { 
+    "node": ">=16"
+  }
   "scripts": {
     "start": "babel-node server.js"
   },
