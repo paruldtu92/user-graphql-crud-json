@@ -1,5 +1,5 @@
 import { PubSub } from "apollo-server-express";
-
+import users from "./users.json";
 const pubsub = new PubSub();
 
 //const fs = require("fs");
@@ -9,12 +9,12 @@ import fs from "fs";
 export default {
   Query: {
     users: (_parent, _args, {}, _info) => {
-      const users = require("./users");
+      //const users = require("./users");
       return users;
     },
 
     user: (_parent, args, {}, _info) => {
-      const users = require("./users");
+      //const users = require("./users");
       let newUsers = users.filter(function (e) {
         return (
           e.email &&
@@ -32,7 +32,7 @@ export default {
 
   Mutation: {
     createUser: (_parent, args, {}, _info) => {
-      const users = require("./users");
+      //const users = require("./users");
       let filteredUser = users.filter((item) => {
         return item.email == args.email;
       });
@@ -66,7 +66,7 @@ export default {
     },
 
     updateUser: (_parent, args, {}, _info) => {
-      const users = require("./users");
+      //const users = require("./users");
       let isUpdated = false;
       let newUser = users.map((item) => {
         if (item.email === args.email) {
@@ -102,7 +102,7 @@ export default {
     },
 
     deleteUser: (_parent, args, {}, _info) => {
-      const users = require("./users");
+      //const users = require("./users");
       let isDeleted = false;
       let newUsers = users.filter((item) => {
         if (item.email === args.email) isDeleted = true;
