@@ -2,7 +2,9 @@ import { PubSub } from "apollo-server-express";
 
 const pubsub = new PubSub();
 
-const fs = require("fs");
+//const fs = require("fs");
+
+import fs from "fs";
 
 export default {
   Query: {
