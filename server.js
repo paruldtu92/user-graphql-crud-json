@@ -1,8 +1,8 @@
 import express from "express";
 import http from "http";
 import { ApolloServer, gql } from "apollo-server-express";
-import typeDefs from "./schema";
-import resolvers from "./resolvers";
+import typeDefs from "./schema.js";
+import resolvers from "./resolvers.js";
 const app = express();
 const cors = require('cors');
 const PORT = 4000;
